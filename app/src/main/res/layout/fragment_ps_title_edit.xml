@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="photoStory"
+            type="org.jhoffmann.photostorybook.helpers.PhotoStory" />
+        <variable
+            name="viewmodel"
+            type="org.jhoffmann.photostorybook.helpers.PhotoStoryViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameEditPSTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/set_a_title_for_your_photo_story"
+        tools:context=".fragments.PSTitleEditFragment">
+
+        <EditText
+            android:id="@+id/editTextStoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:contentDescription="@string/enter_title_of_photo_story"
+            android:ems="10"
+            android:hint="@string/title_of_photo_story"
+            android:inputType="textPersonName"
+            android:text="@={viewmodel.photoStoryTitle}"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageStoryTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageStoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/optional_title_photo_of_your_story"
+            android:minWidth="200dp"
+            android:minHeight="200dp"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            app:imageUrl="@{photoStory.titleImage.imageUrl}"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContinue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextStoryTitle" />
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/proceed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/back"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonContinue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

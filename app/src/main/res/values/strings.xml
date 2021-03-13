@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PhotoStoryBook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="photostory">PhotoStory</string>
+    <string name="add_new_photo_story">Add new photo story</string>
+    <string name="title_of_photo_story">Title of photo story</string>
+    <string name="set_a_title_for_your_photo_story">Set a title for your photo story</string>
+    <string name="proceed">Continue</string>
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="enter_title_of_photo_story">Enter title of photo story</string>
+    <string name="optional_title_photo_of_your_story">optional title photo of your story</string>
+    <string name="finish">Finish</string>
+    <string name="edit_photostory_title">Edit photo story</string>
+    <string name="photostory_title">Photostory</string>
+    <string name="select_title_photo">Select title photo</string>
+    <string name="select_photos">Select photos for story</string>
+    <string name="drag_to_reorder">Drag to reorder photos</string>
+    <string name="delete_story">Delete photostory ?</string>
+    <string name="delete_story_question">Do you really want to delete this photostory ?</string>
+    <string name="review_photostory">Review photostory</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="about">About</string>
+    <string name="about_text">With Photo story book you can use your photos to arrange a slide show with subtitles of selected photos.</string>
+</resources>

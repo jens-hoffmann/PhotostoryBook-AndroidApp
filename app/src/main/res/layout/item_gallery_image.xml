@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="psImage"
+            type="org.jhoffmann.photostorybook.helpers.PSImage" />
+        <variable
+            name="imageClickListener"
+            type="org.jhoffmann.photostorybook.adapters.PSImageClickListener" />
+    </data>
+    <org.jhoffmann.photostorybook.helpers.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gallery_item_container">
+
+        <ImageView
+            android:id="@+id/ivGalleryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:columnWidth="200dp"
+            android:scaleType="centerCrop"
+            android:onClick="@{(theView) -> imageClickListener.onClick(theView, psImage)}"/>
+
+        <TextView
+            android:id="@+id/txtImageNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="4dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+    </org.jhoffmann.photostorybook.helpers.SquareLayout>
+</layout>

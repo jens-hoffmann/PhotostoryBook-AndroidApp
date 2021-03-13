@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="photoStory"
+            type="org.jhoffmann.photostorybook.helpers.PhotoStory" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/framePSIntro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.PSIntroFragment">
+
+        <TextView
+            android:id="@+id/txtPSTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:hint="@string/title_of_photo_story"
+            android:text="@{photoStory.storyTitle}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/imagePSTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imagePSTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/optional_title_photo_of_your_story"
+            android:visibility="@{photoStory.titleImage != null ? View.VISIBLE : View.GONE}"
+            android:minWidth="200dp"
+            android:minHeight="200dp"
+            android:src="@drawable/ic_baseline_add_photo_alternate_24"
+            app:imageUrl="@{photoStory.titleImage.imageUrl}"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContinue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPSTitle" />
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/proceed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/back"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonContinue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

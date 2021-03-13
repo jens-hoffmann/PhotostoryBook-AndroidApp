@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/show_navigation.xml"
+    app:startDestination="@id/storyList">
+
+    <fragment
+        android:id="@+id/storyList"
+        android:name="org.jhoffmann.photostorybook.fragments.StoryListFragment"
+        android:label="Photostory list">
+        <action
+            android:id="@+id/action_storyList_to_PSIntroFragment"
+            app:destination="@id/PSIntroFragment" />
+        <action
+            android:id="@+id/action_storyList_to_PSTitleEditFragment2"
+            app:destination="@id/PSTitleEditFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/PSIntroFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.PSIntroFragment"
+        android:label="@string/photostory_title"
+        tools:layout="@layout/fragment_ps_intro" >
+        <action
+            android:id="@+id/action_PSIntroFragment_to_storySlideShow"
+            app:destination="@id/storySlideShow" />
+    </fragment>
+    <fragment
+        android:id="@+id/PSTitleEditFragment2"
+        android:name="org.jhoffmann.photostorybook.fragments.PSTitleEditFragment"
+        android:label="@string/edit_photostory_title"
+        tools:layout="@layout/fragment_ps_title_edit">
+        <action
+            android:id="@+id/action_PSTitleEditFragment2_to_galleryFragment2"
+            app:destination="@id/galleryFragment2" />
+        <action
+            android:id="@+id/action_PSTitleEditFragment2_to_selectPhotosFragment"
+            app:destination="@id/selectPhotosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment2"
+        android:name="org.jhoffmann.photostorybook.fragments.GalleryFragment"
+        android:label="@string/select_title_photo"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment2_to_PSTitleEditFragment2"
+            app:destination="@id/PSTitleEditFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectPhotosFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.SelectPhotosFragment"
+        android:label="@string/select_photos">
+        <action
+            android:id="@+id/action_selectPhotosFragment_to_reorderPhotosFragment"
+            app:destination="@id/reorderPhotosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reorderPhotosFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.ReorderPhotosFragment"
+        android:label="@string/drag_to_reorder">
+        <action
+            android:id="@+id/action_reorderPhotosFragment_to_storyGalleryFragment"
+            app:destination="@id/storyGalleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storyGalleryFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.StoryGalleryFragment"
+        android:label="@string/review_photostory">
+        <action
+            android:id="@+id/action_storyGalleryFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_storyGalleryFragment_to_storyList"
+            app:destination="@id/storyList" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.ViewPagerFragment"
+        android:label="ViewPagerFragment" />
+    <fragment
+        android:id="@+id/storySlideShow"
+        android:name="org.jhoffmann.photostorybook.fragments.StorySlideShow"
+        android:label="fragment_story_slide_show"
+        tools:layout="@layout/fragment_story_slide_show" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.jhoffmann.photostorybook.fragments.aboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

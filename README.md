@@ -4,8 +4,9 @@ Android app to create photostories from your photos. You can select picture, cha
 ## Screenshots
 
 <img src="screenshots/Screenshot_empty_Story.png" width=300 align=center>
-<img src="sscreenshots/Screenshot_title_edit.png" width=300 align=center>
+<img src="screenshots/Screenshot_title_edit.png" width=300 align=center>
 <img src="screenshots/Screenshot_select_pictures.png" width=300 align=center>
+<img src="screenshots/Screenshot_subtitle_edit.png" width=300 align=center>
 <img src="screenshots/Screenshot_story_list.png" width=300 align=center>
 
 Pictures are courtesy of NASA. See https://www.nasa.gov/mission_pages/msl/images/index.html
